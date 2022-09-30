@@ -1,6 +1,5 @@
 from enum import IntEnum
 import random
-from secrets import choice
 
 class Choice(IntEnum):
     ROCK = 0
