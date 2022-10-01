@@ -1,7 +1,7 @@
 // Check leap year
 // For leap year entered year should be perfectly divided by 4
 // For centuries leap year should be perfectly divided by 400
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
     int year;
@@ -13,4 +13,3 @@ int main()
         printf("%d isn't leap year\n", year);
     return 0;
 }
-

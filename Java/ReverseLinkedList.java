@@ -2,6 +2,7 @@
 class Node {
     int data;
     Node next;
+
     Node(int d) {
         data = d;
         next = null;
@@ -11,6 +12,7 @@ class Node {
 // Linked List class
 class LinkedList {
     Node head;
+
     // insert a node at the end of the list
     public void insert(int data) {
         Node newNode = new Node(data);
@@ -24,6 +26,7 @@ class LinkedList {
         }
         temp.next = newNode;
     }
+
     // print the list
     public void print() {
         Node temp = head;
@@ -34,6 +37,7 @@ class LinkedList {
         }
         System.out.println();
     }
+
     // reverse the list
     public void reverse() {
         Node prev = null;

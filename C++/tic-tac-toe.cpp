@@ -1,25 +1,23 @@
 #include <iostream>
 using namespace std;
 
-char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
+char square[10] = {'o', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
 int checkwin();
 void board();
 
-int main()
-{
-	int player = 1,i,choice;
+int main() {
+    int player = 1, i, choice;
 
     char mark;
-    do
-    {
+    do {
         board();
-        player=(player%2)?1:2;
+        player = (player % 2) ? 1 : 2;
 
         cout << "Player " << player << ", enter a number:  ";
         cin >> choice;
 
-        mark=(player == 1) ? 'X' : 'O';
+        mark = (player == 1) ? 'X' : 'O';
 
         if (choice == 1 && square[1] == '1')
 
@@ -48,24 +46,24 @@ int main()
         else if (choice == 9 && square[9] == '9')
 
             square[9] = mark;
-        else
-        {
-            cout<<"Invalid move ";
+        else {
+            cout << "Invalid move ";
 
             player--;
             cin.ignore();
             cin.get();
         }
-        i=checkwin();
+
+        i = checkwin();
 
         player++;
-    }while(i==-1);
+    } while (i == -1);
     board();
-    if(i==1)
+    if (i == 1)
 
-        cout<<"==>\aPlayer "<<--player<<" win ";
+        cout << "==>\aPlayer " << --player << " win ";
     else
-        cout<<"==>\aGame draw";
+        cout << "==>\aGame draw";
 
     cin.ignore();
     cin.get();
@@ -79,8 +77,7 @@ int main()
     O GAME IS OVER AND NO RESULT
 **********************************************/
 
-int checkwin()
-{
+int checkwin() {
     if (square[1] == square[2] && square[2] == square[3])
 
         return 1;
@@ -105,18 +102,16 @@ int checkwin()
     else if (square[3] == square[5] && square[5] == square[7])
 
         return 1;
-    else if (square[1] != '1' && square[2] != '2' && square[3] != '3' 
-                    && square[4] != '4' && square[5] != '5' && square[6] != '6' 
-                  && square[7] != '7' && square[8] != '8' && square[9] != '9')
+    else if (square[1] != '1' && square[2] != '2' && square[3] != '3' &&
+             square[4] != '4' && square[5] != '5' && square[6] != '6' &&
+             square[7] != '7' && square[8] != '8' && square[9] != '9')
 
         return 0;
     else
         return -1;
 }
 
-
-void board()
-{
+void board() {
     system("cls");
     cout << "\n\n\tTic Tac Toe\n\n";
 
@@ -124,17 +119,20 @@ void board()
     cout << endl;
 
     cout << "     |     |     " << endl;
-    // cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
+    // cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3]
+    // << endl;
 
     // cout << "_____|_____|_____" << endl;
     // cout << "     |     |     " << endl;
 
-    cout << "  " << square[4] << "  |  " << square[5] << "  |  " << square[6] << endl;
+    cout << "  " << square[4] << "  |  " << square[5] << "  |  " << square[6]
+         << endl;
 
     cout << "_____|_____|_____" << endl;
     cout << "     |     |     " << endl;
 
-    cout << "  " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
+    cout << "  " << square[7] << "  |  " << square[8] << "  |  " << square[9]
+         << endl;
 
     cout << "     |     |     " << endl << endl;
 }

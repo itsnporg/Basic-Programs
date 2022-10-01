@@ -1,29 +1,24 @@
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 using namespace std;
 
 int n;
 int main();
-void calculate(int m)
-{
+void calculate(int m) {
     n += m;
     cout << "Are you done?[Type (1) to say 'yes' and (0) to say 'no']"
          << "\n";
     bool a;
     cin >> a;
-    if (a)
-    {
+    if (a) {
         cout << "The total price is :" << n;
-    }
-    else
-    {
+    } else {
         main();
     }
 }
 
-void snacks()
-{
+void snacks() {
     int m, n;
     cout << "1.Lolipop                   Rs200"
          << "\n";
@@ -31,20 +26,16 @@ void snacks()
          << "\n\n\n";
     cout << "Enter your choice :";
     cin >> m;
-    if (m == 1)
-    {
+    if (m == 1) {
         n = 200;
         calculate(n);
-    }
-    else if (m == 2)
-    {
+    } else if (m == 2) {
         n = 300;
         calculate(n);
     }
 }
 
-void soup()
-{
+void soup() {
     int m, n;
     cout << "1.Human soup                   Rs150"
          << "\n";
@@ -54,20 +45,16 @@ void soup()
     cout << "Enter your choice :";
     cin >> m;
 
-    if (m == 1)
-    {
+    if (m == 1) {
         n = 150;
         calculate(n);
-    }
-    else if (m == 2)
-    {
+    } else if (m == 2) {
         n = 210;
         calculate(n);
     }
 }
 
-int main()
-{
+int main() {
     int j;
 
     cout << "--------MENU---------" << endl;
@@ -79,12 +66,9 @@ int main()
     cout << "Select :";
     cin >> j;
 
-    if (j == 1)
-    {
+    if (j == 1) {
         snacks();
-    }
-    else if (j == 2)
-    {
+    } else if (j == 2) {
         soup();
     }
 }

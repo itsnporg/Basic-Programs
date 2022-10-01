@@ -1,7 +1,7 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
-/* 
+/*
 void characterConversion(char character){
     char upperChar, lowerChar;
     int ascii;
@@ -13,43 +13,45 @@ void characterConversion(char character){
 
 } */
 
-char* uppercase(char *string){
+char *uppercase(char *string)
+{
     char ch;
-   
-    int len =strlen(string);
-    for (int i=0;i<len;i++){
-        ch=string[i];
-        if (ch >='a' && ch <='z'){
-            string[i] = ch-32;
+
+    int len = strlen(string);
+    for (int i = 0; i < len; i++)
+    {
+        ch = string[i];
+        if (ch >= 'a' && ch <= 'z')
+        {
+            string[i] = ch - 32;
         }
     }
     return string;
-
 }
-char* lowercase(char *string){
+char *lowercase(char *string)
+{
     char ch;
-    
-    int len =strlen(string);
-    for (int i=0;i<len;i++){
-        ch=string[i];
-        if (ch >='A' && ch <='Z'){
-            string[i] = ch+32;
+
+    int len = strlen(string);
+    for (int i = 0; i < len; i++)
+    {
+        ch = string[i];
+        if (ch >= 'A' && ch <= 'Z')
+        {
+            string[i] = ch + 32;
         }
     }
     return string;
-
 }
 
 int main()
 {
-   char string [500];
-   printf("Enter your string :");
-   scanf("%[^\n]s",string);
+    char string[500];
+    printf("Enter your string :");
+    scanf("%[^\n]s", string);
 
-  
-   printf("\n uppercase is %s ",uppercase(string));
-   printf("\n Lowercase is %s ",lowercase(string));
-   
-    
+    printf("\n uppercase is %s ", uppercase(string));
+    printf("\n Lowercase is %s ", lowercase(string));
+
     return 0;
 }

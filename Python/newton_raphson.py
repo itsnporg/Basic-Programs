@@ -3,7 +3,7 @@
 # import sympy
 from sympy import *
 
-x_symb = symbols('x')
+x_symb = symbols("x")
 
 # Taking equation as string
 function = input("Enter the function: ")
@@ -24,7 +24,7 @@ for i in range(iter):
     # Final Calculations
     fx0 = round(fx0_sympy.subs(x_symb, x_value), decimal_points)
     der_fx0 = round(der_fx.subs(x_symb, x_value), decimal_points)
-    x1 = round(x_value - (fx0)/der_fx0, decimal_points)
+    x1 = round(x_value - (fx0) / der_fx0, decimal_points)
 
     print(f"Value of f({x_value}): {fx0:.{decimal_points}f}")
     print(f"Value of f'({x_value}): {der_fx0:.{decimal_points}f}")
