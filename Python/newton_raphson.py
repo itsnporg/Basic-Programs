@@ -1,6 +1,6 @@
 # Newton Raphson Method
 
-# import sympy
+import sympy
 from sympy import *
 
 x_symb = symbols("x")
