@@ -21,8 +21,12 @@ char* uppercase(char *string){
         ch=string[i];
         if (ch >='a' && ch <='z'){
             string[i] = ch-32;
+<<<<<<< HEAD
+
+=======
         }
     }
+>>>>>>> master
     return string;
 
 }
