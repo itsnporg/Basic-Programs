@@ -16,17 +16,17 @@ console.log(`Fibonacci Series up to ${numOfTerms} terms: `);
 
 // iterate upto number of times user has given input
 for (let i = 1; i <= numOfTerms; i++) {
-	// add comma after each output number until it's not the last one
-	if (numOfTerms === i) {
-		result += firstNum.toString();
-	} else {
-		result += firstNum.toString() + ",";
-	}
+  // add comma after each output number until it's not the last one
+  if (numOfTerms === i) {
+    result += firstNum.toString();
+  } else {
+    result += firstNum.toString() + ",";
+  }
 
-	// update values for next iteration
-	nextTerm = firstNum + secondNum;
-	firstNum = secondNum;
-	secondNum = nextTerm;
+  // update values for next iteration
+  nextTerm = firstNum + secondNum;
+  firstNum = secondNum;
+  secondNum = nextTerm;
 }
 
 console.log(result);
