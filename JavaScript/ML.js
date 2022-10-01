@@ -25,7 +25,7 @@ function draw() {
   fill(255);
   text('shi');
 
-   if (label == "ForestFire") {
+  if (label == "ForestFire") {
     emoji = "🔥";
   } else if (label == "logging") {
     emoji = "🪵";
