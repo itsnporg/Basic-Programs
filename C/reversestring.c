@@ -9,6 +9,7 @@ char *reverse(char *string){
         temp=string[i];
         string[i]=string[len-1-i];
         string[len-1-i]=temp;
+        
         /*
             reversing a string is simply swapping first and last character lets see how its work 
 
@@ -30,7 +31,7 @@ char *reverse(char *string){
 int main(int argc, char* argv){
     char string[500];
     printf("\n Enter String : ");
-    scanf("%s",string);
+    scanf("%[^\n]s",string); // fgets(string,500,stdin)
     printf("\n\n \t\t The reverse of the string is : %s",reverse(string));
     return 0;
 }
