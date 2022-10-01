@@ -1,6 +1,6 @@
-//using strlen() function
-#include<stdio.h>
-#include<string.h>
+// using strlen() function
+#include <stdio.h>
+#include <string.h>
 int main()
 {
     char name[20];
@@ -10,4 +10,3 @@ int main()
     printf("The length is %d", len);
     return 0;
 }
-

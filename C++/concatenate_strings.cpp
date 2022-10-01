@@ -1,5 +1,5 @@
-#include < iostream>
-#include < string >
+#include <iostream>
+#include <string>
 using namespace std;
 int main()
 
@@ -10,7 +10,7 @@ int main()
     cout << "Enter string str2:";
     cin >> str2;
     strcat(str1, str2);
-    cout << "strcat (str1, str2 ) : " << str1;
+    cout << "strcat (str1, str2) : " << str1;
 
     system("pause");
     return 0;

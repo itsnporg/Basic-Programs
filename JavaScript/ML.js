@@ -1,10 +1,10 @@
 let label = "waiting...";
 
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/20Vd-aLxu/';
+let modelURL = "https://teachablemachine.withgoogle.com/models/20Vd-aLxu/";
 
 function preload() {
-  classifier = ml5.soundClassifier(modelURL + 'model.json');
+  classifier = ml5.soundClassifier(modelURL + "model.json");
 }
 
 function setup() {
@@ -23,14 +23,13 @@ function draw() {
 
   let emoji = "🌲🌳";
   fill(255);
-  text('shi');
+  text("shi");
 
   if (label == "ForestFire") {
     emoji = "🔥";
   } else if (label == "logging") {
     emoji = "🪵";
   }
-
 
   textSize(256);
   text(emoji, width / 2, height / 2);
