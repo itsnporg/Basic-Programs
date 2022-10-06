@@ -3,7 +3,6 @@ interface Queue {
     size: number;
     front: number;
     rear: number;
-
     enqueue(data: any): void;
     dequeue(): any;
     peek(): any;
@@ -16,46 +15,47 @@ class Queue {
      front: number = 0;
      rear: number = 0;
      size: number = 0;
+     //initialize the queue
     constructor(size: number) {
         //size of the queue
-        this.size = size;
+        this.size = size; 
     }
     public enqueue = enqueue;
     public dequeue = dequeue;
     public isQueueEmpty = isQueueEmpty;
     public peek = peek;
     public printQueue = printQueue;
-}
+} 
 
 //pushing an element in queue
 function enqueue(data: any) {
     if (this.rear === this.size) {
         console.log("Queue is full");
-        return;
+        return; //if the queue is full then we can't add any element in it
     }
-    this.items[this.rear] = data;
-    this.rear++;
+    this.items[this.rear] = data; //adding the element in the queue
+    this.rear++; //incrementing the rear pointer to point to the next element in the queue
 }
 //poping and elememnt from queue
 function dequeue() {
     if (this.front === this.rear) {
         console.log("Queue is empty");
-        return;
+        return; //if the queue is empty then we can't remove any element from it
     }
-    let data = this.items[this.front];
-    this.front++;
-    return data;
+    let data = this.items[this.front]; //storing the first element of the queue in data variable
+    this.front++; //incrementing the front pointer to point to the next element in the queue
+    return data; //returning the first element of the queue which is removed
 }
 function peek() {
-    return this.items[this.front];
+    return this.items[this.front]; //returning the first element of the queue
 }
 function isQueueEmpty() {
-    return this.front === this.rear;
+    return this.front === this.rear; //if the front and rear pointer are equal then the queue is empty
 }
 function printQueue() {
     if (this.isQueueEmpty()) {
         console.log("Queue is empty");
-        return;
+        return; //if the queue is empty then we can't print any elements from it
     } 
     let str = "";
     for (let i = this.front; i < this.rear; i++) {
