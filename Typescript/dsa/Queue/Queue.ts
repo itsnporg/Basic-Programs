@@ -1,17 +1,30 @@
+interface Queue {
+    items: any[];
+    size: number;
+    front: number;
+    rear: number;
+
+    enqueue(data: any): void;
+    dequeue(): any;
+    peek(): any;
+    isQueueEmpty(): boolean;
+    printQueue(): string | undefined;
+}
+
 class Queue {
-    private items: any[] = [];
-    private front: number = 0;
-    private rear: number = 0;
-    private size: number = 0;
+     items: any[] = [];
+     front: number = 0;
+     rear: number = 0;
+     size: number = 0;
     constructor(size: number) {
         //size of the queue
         this.size = size;
     }
-    public enqueue  = enqueue;
-    public dequeue  = dequeue;
-    public isQueueEmpty  = isQueueEmpty;
-    public peek  = peek;
-    public printQueue  = printQueue;
+    public enqueue = enqueue;
+    public dequeue = dequeue;
+    public isQueueEmpty = isQueueEmpty;
+    public peek = peek;
+    public printQueue = printQueue;
 }
 
 //pushing an element in queue
@@ -40,10 +53,10 @@ function isQueueEmpty() {
     return this.front === this.rear;
 }
 function printQueue() {
-    if(this.isQueueEmpty()){
+    if (this.isQueueEmpty()) {
         console.log("Queue is empty");
         return;
-    }
+    } 
     let str = "";
     for (let i = this.front; i < this.rear; i++) {
         str += this.items[i] + " ";
@@ -60,14 +73,14 @@ queue.enqueue(40);
 queue.enqueue(50);
 //queue.enqueue(60); //Queue is full
 
-console.log(queue.printQueue());
+console.log(queue.printQueue()); //10 20 30 40 50
 
 //dequeueing an element from queue
-console.log(queue.dequeue());
+console.log(queue.dequeue()); //10 will be removed
 //printing an elemets from queue
-console.log(queue.printQueue());
+console.log(queue.printQueue()); //20 30 40 50 
 //peeking an element from queue
-console.log(queue.peek());
+console.log(queue.peek()); //20
 //checking if the  queue is empty or not
-console.log(queue.isQueueEmpty());
+console.log(queue.isQueueEmpty()); // it returns  false
 

@@ -27,6 +27,7 @@ function enqueue(data) {
 function dequeue() {
     if (this.front === this.rear) {
         console.log("Queue is empty");
+        return;
     }
     var data = this.items[this.front];
     this.front++;
@@ -39,6 +40,10 @@ function isQueueEmpty() {
     return this.front === this.rear;
 }
 function printQueue() {
+    if (this.isQueueEmpty()) {
+        console.log("Queue is empty");
+        return;
+    }
     var str = "";
     for (var i = this.front; i < this.rear; i++) {
         str += this.items[i] + " ";
@@ -52,6 +57,13 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
-queue.enqueue(60);
-queue.enqueue(70);
+//queue.enqueue(60); //Queue is full
 console.log(queue.printQueue());
+//dequeueing an element from queue
+console.log(queue.dequeue());
+//printing an elemets from queue
+console.log(queue.printQueue());
+//peeking an element from queue
+console.log(queue.peek());
+//checking if the  queue is empty or not
+console.log(queue.isQueueEmpty());
