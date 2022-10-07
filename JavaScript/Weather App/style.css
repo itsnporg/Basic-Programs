@@ -1,0 +1,127 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#48484a;
+    background-color:#0a1a30;
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Montserrat';
+    
+}
+p{
+    font-family: 'Ubuntu';
+
+}
+
+.locname  {
+    font-size: 3rem;
+}
+.errorMessage{
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+
+.container1{
+   display: flex;
+}
+
+
+.maincard{
+    display: flex;
+    justify-content: center;
+}
+#search{
+    background-color: #091b3d;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    justify-content: center;
+    border: 2px solid grey;
+    /* color: green; */
+    font-size: 18px;
+    float: left;
+   
+}
+.select-class{
+    color:white;
+    background-color: black;
+}
+
+#searchbutton{
+    height: 35px;
+    margin-left: 3px;
+    background: none;
+    border:none
+}
+
+#searchbutton:hover{
+    background-color: grey;
+}
+
+.fa{
+    color:white;
+}
+
+.weatherdesc{
+    display: flex;
+    align-items: center;
+}
+input[type=text] , input::placeholder{
+    color: grey;
+}
+
+#weatherdesc , #humidity{
+    font-size: 1.1rem;
+    color: #8f8a8a;
+    line-height: 0.9rem;
+}
+.card1{
+    background: rgb(5,5,23);
+    background-color:#102542;
+
+/* background: linear-gradient(90deg, rgba(5,5,23,1) 7%, rgba(3,2,32,1) 55%, rgba(4,12,51,1) 99%); */
+    box-shadow: 0 0 3px 3px #102542;
+    margin:5% 0 5% 5%;
+    align-items: center;
+    padding: 5%;
+    width:500px;
+    height: 300px;
+   
+}
+.temperature{
+    font-size: 4rem;
+}
+
+.container2 p{
+    font-size: 2rem;
+    
+}
+.card{
+   
+    background-color: #102542;
+    background: linear-gradient(90deg, rgba(5,5,23,1) 7%, rgba(3,2,32,1) 55%, rgba(4,12,51,1) 99%);
+    box-shadow: 0 0 3px 3px grey;
+    width:300px;
+    height: 300px;
+    float: right;
+    margin: 5%;
+    position: relative;
+   right: -270px;
+   
+}
+
+/* //error.html */
+.backbutton{
+    font-size: 1.2rem;
+    padding: 3%;
+    border-radius: 10px;
+    margin-left: 30px;
+    background-color:white;
+    color: black;
+    /* text-align: center; */
+}
+.backbutton:hover{
+    color:blue;
+}
