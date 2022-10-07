@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <title>  Weather App</title>
+        <link rel = "icon" href ="images/weather.png">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
+    </head>
+    <body>
+   
+        <div class="maincard">
+            <div class="card1">
+                <div class="container1">
+                    <div class="location">
+                        <input id='search' type="text" placeholder="Search a city" list="search-dropdown" name="city"  > 
+                        <button id ="searchbutton" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                        <datalist id="search-dropdown">
+                           
+                        </datalist>
+                    </input>
+                        <h2 class="locname" id="timezone"></h2>
+                        <p id='weatherdesc'></p>
+                        <p id='humidity'></p>
+                        <p id='pressure'></p>
+                       <span id="date"></span>
+                       </div>
+
+                
+                       <div class="weatherdesc">
+                        <img id="icon" src="" alt="">
+                     
+                       </div>
+                      
+                     
+        
+                </div>
+              <div class="container2">
+                <div class="temperature">
+                    <span id="temp"></span><span id="tempUnit"></span>
+
+                   </div>
+            
+                   
+              
+               </div>
+               </div>
+               
+        
+             
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- <script type="module" src = "index.js" defer></script> -->
+       <script src="index.js"></script>
+    </body>
+</html>
