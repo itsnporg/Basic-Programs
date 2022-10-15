@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.container {
+  width: 75%;
+  max-width: 550px;
+  border: 2px solid #333;
+  border-radius: 7px;
+  padding: 3em;
+  text-align: center;
+  background: #111;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 0.75em 1em;
+  background: transparent;
+  font-size: 1.5rem;
+  color: #ccc;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 7px;
+  margin: 1em 0;
+}
+
+input:hover ~ .copy,
+input:hover ~ .marker {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.copy {
+  position: absolute;
+  top: 36%;
+  color: #ccc;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  background: #111;
+  border: 1px solid #333;
+  right: -65px;
+  z-index: 100;
+  opacity: 0;
+  translate: 50px 0;
+  transition: 250ms ease;
+}
+
+.marker {
+  content: "";
+  position: absolute;
+  top: 42%;
+  right: 17px;
+  width: 15px;
+  height: 15px;
+  background: #111;
+  border: 1px solid #333;
+  z-index: 10;
+  transform: rotate(45deg);
+  opacity: 0;
+  translate: 50px 0;
+  transition: 250ms ease;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ccc;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5em 2em;
+  font-size: 1.8rem;
+  background: #111;
+  color: #ccc;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background: #222;
+}
