@@ -124,10 +124,10 @@ void board()
     cout << endl;
 
     cout << "     |     |     " << endl;
-    // cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
+     cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
 
-    // cout << "_____|_____|_____" << endl;
-    // cout << "     |     |     " << endl;
+     cout << "_____|_____|_____" << endl;
+     cout << "     |     |     " << endl;
 
     cout << "  " << square[4] << "  |  " << square[5] << "  |  " << square[6] << endl;
 
